@@ -3,9 +3,19 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'cibandoapp';
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+
+  // pecorso da dove prendre le immagini da sostituire  nel carousel
+
+  evidenziato=false;
+
+  onEvidenziato (){
+
+    this.evidenziato = !this.evidenziato
+
+
+  }
 }
