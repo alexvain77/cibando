@@ -22,7 +22,7 @@ export class RecipesComponent implements OnInit {
       },
       error: (errore) => {
         console.log(errore);
-      },
+      }
     });
 
     // console.log('questo è l onInit');
