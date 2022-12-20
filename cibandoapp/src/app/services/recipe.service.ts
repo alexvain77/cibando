@@ -9,11 +9,12 @@ import { Observable, of } from 'rxjs';
 export class RecipeService {
   constructor() {}
 
-  getRecipes(): Observable<Recipe[]>{
-
-return of (RECIPES)
-
+  getRecipes(): Observable<Recipe[]> {
+    return of(RECIPES);
   }
 
-
+  getRecipe(id: number): Observable<Recipe> {
+    const recipe = RECIPES.find(ricetta => ricetta._id === id);
+    return of (recipe);
+  }
 }
